@@ -13,6 +13,17 @@ python decoder.py lookup tabarnak
 
 No API key, no account. Python standard library only.
 
+## Disclaimer
+
+This project is for education only. It is not an authoritative
+dictionary or professional language advice, its definitions are
+informal and may vary by region, context, and tone, and vulgar
+entries are quoted so learners can recognise them — not as an
+endorsement or a recommendation to use them. Use any expression at
+your own discretion and risk. The full text is in
+[DISCLAIMER.md](DISCLAIMER.md), and the software is provided "AS IS"
+under the MIT LICENSE.
+
 ## Quickstart (3 commands)
 
 ```bash
@@ -58,6 +69,7 @@ testable, not just random).
 ## Project structure
 
 ```
+DISCLAIMER.md       # full disclaimer — read before using
 decoder.py          # lookup, search, list, quiz (stdlib only)
 data/words.json     # 37 entries: term, meaning, examples, register
 test_decoder.py     # 9 tests
