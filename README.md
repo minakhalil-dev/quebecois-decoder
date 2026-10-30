@@ -13,6 +13,40 @@ python decoder.py lookup tabarnak
 
 No API key, no account. Python standard library only.
 
+## Why this project exists
+
+This is a **learning project, not an authoritative dictionary** —
+and it is small on purpose.
+
+The point is to show, in one readable file (`decoder.py`), how a
+useful language tool works on a real local problem: understanding
+Quebec French is not just translation, it is register. That is why
+the repo keeps everything visible and testable, instead of hiding
+it behind an API:
+
+- **Offline data + lookup** — 37 original entries in
+  `data/words.json`, no account, no network, standard library only.
+- **Accent- and case-insensitive matching** — `depanneur`,
+  `DÉPANNEUR`, and `dépanneur` all resolve, with "did you mean?"
+  suggestions on a miss instead of silence.
+- **Register as a safety feature** — every entry is labelled polite,
+  familiar, or vulgar, because a word that is fine with friends can
+  be a swear word at work. That label is the point of the tool, not
+  a footnote.
+- **A testable quiz** — questions have 4 distinct options with the
+  correct meaning in them, deterministic with a seed, so the quiz
+  is tested, not just random.
+
+If you are learning from this, read it in this order:
+`data/words.json` (the entries), `decoder.py` (lookup, search,
+quiz), then `test_decoder.py` (did the lookups, suggestions, and
+quiz actually work?). If you wanted to turn this into a real
+product, the next steps would be a larger verified lexicon, audio
+and pronunciation, and region notes — all listed as future work,
+not silently skipped. The definitions here are original, informal
+writing for learners, and meanings vary by region, generation,
+context, and tone.
+
 ## Disclaimer
 
 This project is for education only. It is not an authoritative
